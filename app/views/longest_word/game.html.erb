@@ -1,0 +1,15 @@
+<h1>******** Welcome to the <strong> Longest Word</strong> ********</h1>
+
+<p>Here is your grid : <bold><%= @grid%><bold></p>
+
+
+<h2>Game is on!</h2>
+
+<form action="/longest_word/score">
+  <label for="answer">Give us your best shot!</label>
+  <input type="text" id="answer" name="shot" placeholder="aerophobe">
+  <input type="submit" value="Go on!">
+  <input type="hidden" name="start_time" value="<%=Time.now.to_i%>">
+  <input type="hidden" name="grid" value="<%=@grid%>">
+</form>
+
